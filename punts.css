@@ -1,0 +1,229 @@
+/* punts.css - Style Sheet for the Clare MCR Punts booker */
+/* Author: Mark Schenk (ms652) */
+
+@font-face {
+	font-family: "Veteran Typewriter"; /* http://www.dafont.com/veteran-typewriter.font */
+	src: url("veteran typewriter.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Underwood 1913"; /* http://www.dafont.com/underwood1913.font */
+	src: url("underwood 1913.ttf") format("truetype");
+}
+
+html { 
+	height: 100%;
+	padding: 0;	
+}
+
+body {
+	padding-left: 15%; padding-right: 10%; padding-top: 20px;
+	margin: 0;
+	
+	font-family: "Verdana", "Arial", sans-serif;
+	font-size: 13px;
+	color: #121259;
+	line-height: 1.3;
+  
+  	background-image: url("clare_crest_small.png"); 
+	background-size:10%;
+	background-repeat: no-repeat; 
+	background-position: 3% 20px; 
+	background-color: white;
+
+	position: relative; /* provides reference for positioning */
+	
+	max-width: 80%;
+ }
+div#user_welcome {
+	color: black;
+}
+
+div#mainheader h1 {
+	font-family: "Arial", sans-serif;
+	font-size: 2em;
+	margin: 0;
+	line-height: 0.8em;
+	background-color: black;
+	color: #F7B900;
+	padding: 0.5em 0.2em 0.3em 0.3em;
+	border-bottom-style: none;
+}
+
+div#user_welcome {
+	font-weight: bold;
+	margin-bottom: 2em;
+	background-color: #f0aa00;
+	background-color: #F7B900;
+	line-height: 1.8em;
+	padding-left: 0.6em
+}
+
+div#user_welcome a, div#user_welcome a:visited {
+	float: right;
+	padding: 0em 0.6em;
+	border-left: 3px black solid;
+	color: inherit;
+	text-decoration: none;
+}
+
+div#user_welcome a:hover {
+	color: #820000;
+	background-color: #FAD200;
+	text-decoration: underline;
+}
+
+h1 {
+/*	font-family: "Underwood 1913","Veteran Typewriter", sans-serif;	*/
+	font-size: 1.8em; 
+	color: #820000;
+	border-bottom: 2px solid #820000;
+}
+ 
+h2 { 
+	font-size: 1.3em; 
+	margin-top: 1.0em; 
+	margin-bottom: 0em;
+}
+
+h3 {
+	font-size: 1.1em;
+}
+
+h3 {
+	margin-top: 1.5em;
+	background-color: #DBE5ED;
+	margin-bottom: 0.2em;
+	padding: 0em 5px;
+	line-height: 1.7em;
+	text-transform: capitalize;
+	border-bottom: 1px #38709D solid;
+}
+
+h4 { font-size: 1em;
+    font-style: italic;
+    font-weight: bold;
+    margin-top:0em;
+    margin-bottom:0em;
+}
+
+a:link, a:visited, a:hover { color: navy; }
+a:hover { text-decoration: underline; }
+
+ol li { margin-bottom: 0.5em; }
+
+hr { 
+	color: gray; 
+	border-style: solid; 
+	border-bottom-style: inset;
+}
+
+
+
+div#test_warning {
+	padding: 0em 1em;
+	color: red;
+	border: 2px red solid;
+	-moz-border-radius: 5px;	
+	-webkit-border-radius: 5px;	
+	border-radius: 5px;
+}
+
+div.punt-status {
+	width: 75%;
+	padding: 1em;
+	margin: 3em auto;
+	
+	background-image: url("punt_white_2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat; 
+	background-position: center top; 		
+}
+
+div.punt-status  h2{
+	margin-top: 0;
+}
+
+div.footer {
+	color: gray;
+	font-size: 0.6em;
+	border-top: 1px gray solid;
+	margin-top: 4em;
+}
+
+/* Notices/Warnings/etc. get post-it styling */
+
+.note {
+	background-color: #FFFF99;
+	background-color: rgba(255,255,153,0.6);
+	border: 1px black solid;
+	margin: 1em 2em;
+	padding: 0.5em;
+	-moz-box-shadow: 4px 4px 2px #888;	
+	-webkit-box-shadow: 4px 4px 2px #888;	
+	box-shadow: 4px 4px 2px #888;
+	-moz-border-radius: 5px;	
+	-webkit-border-radius: 5px;		
+	border-radius: 5px;
+}
+
+/* Table Styles */
+
+table.display_info {
+	width: 100%;
+	text-align: left;
+	margin: 1em 0em 0.5em 0em;
+}
+
+table.display_info td {
+	padding: 0.2em 0.2em;
+}
+
+table.display_info td.booked, table.display_info td.inactive {
+	color: rgb(209,0,0);
+}
+
+table.display_info td.free {
+	color: rgb(0,102,0);
+}
+
+table th {
+	text-align: left;
+	font-weight: bold;	
+}
+
+table.booking_table td {vertical-align: bottom; }
+
+
+/* Styling of buttons */
+
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #696 #363 #363 #696;
+	border-color: #38709d;
+	background-color: #EFEFEF;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+input[type="submit"]:hover {
+	cursor: pointer;
+    color: #38709d;
+    background-color: #c4def3;	
+}
+
+input[type="submit"]:active {
+	border-style: solid;
+	border-color: #38709d;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;	
+    color: #38709d;
+    background-color: #a4c9ea;	
+}
+
+input[name^="cancel"], input[name^="withdraw"] { color: #820000; border-color: #820000; }
+
+table#form {
+	font-size: 13;
+}
