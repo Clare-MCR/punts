@@ -9,7 +9,7 @@ if (isset($_SESSION['date'])) {
 	$day = new DateTime($_SESSION['date']);
 } else {$day = new DateTime();}
 
-if (!$user->getValue('p_adm')||!$user->getValue('s_adm')) { echo "YOU SHOULDN'T BE HERE";die;}
+if (!($user->getValue('p_adm') || $user->getValue('s_adm'))) { echo "YOU SHOULDN'T BE HERE";die;}
 if (isset($_POST['menu'])){
 	$_SESSION['menu']=$_POST['menu'];
 }
@@ -39,7 +39,7 @@ switch ($_SESSION['menu']) {
 		include('Includes/changedate.php');
 		break;
 }
-    
+
 include('Includes/footer.php');
 
 ?>

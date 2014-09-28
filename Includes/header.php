@@ -37,30 +37,47 @@ $punt2->setValue('crsid',$user->getValue('crsid'));
 <link type="text/css" rel="stylesheet" href="punts.css">
 <script src="modernizr.min.js"></script>
 
-
+<!--
 <script>Modernizr.load({
   test: Modernizr.inputtypes.date,
-  nope: ['http://code.jquery.com/jquery-1.10.2.js', 
-  		 'http://code.jquery.com/ui/1.11.1/jquery-ui.js', 
+  nope: ['http://code.jquery.com/jquery-1.10.2.js',
+  		 'http://code.jquery.com/ui/1.11.1/jquery-ui.js',
   		 'http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css'],
   complete: function () {
     	$('input[type=date]').datepicker({
       		dateFormat: 'yy-mm-dd'
-    }); 
+    });
   }
 });
 </script>
 
-<script>Modernizr.load({
-  test: Modernizr.inputtypes.time,
-  nope: ['http://code.jquery.com/jquery-1.10.2.js', 
-  		 'http://code.jquery.com/ui/1.11.1/jquery-ui.js', 
+  'http://code.jquery.com/jquery-1.10.2.js',
+  		 'http://code.jquery.com/ui/1.11.1/jquery-ui.js',
   		 'http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css',
   		 'http://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.4.5/i18n/jquery-ui-timepicker-addon-i18n.min.js',
   		 'http://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.4.5/jquery-ui-timepicker-addon.min.css',
-  		 'http://trentrichardson.com/examples/timepicker/jquery-ui-sliderAccess.js'],
+  		 'http://trentrichardson.com/examples/timepicker/jquery-ui-sliderAccess.js'
+
+-->
+
+<script>Modernizr.load({
+  test: Modernizr.inputtypes.time,
+  nope: ['http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css',
+  		 'http://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.4.5/jquery-ui-timepicker-addon.min.css',
+  		 'http://code.jquery.com/jquery-1.11.1.min.js',
+  		 'http://code.jquery.com/ui/1.11.1/jquery-ui.min.js',
+  		 'http://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.4.5/jquery-ui-timepicker-addon.js',
+  		 'http://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.4.5/jquery-ui-sliderAccess.js'],
   complete: function () {
-		$('input[type=time]').timepicker();
+		$('input[type=time]').timepicker({
+			controlType: 'select',
+			timeFormat: 'hh:mm tt',
+			stepMinute: 30,
+
+		});
+		$('input[type=date]').datepicker({
+      		dateFormat: 'yy-mm-dd'
+    	});
   }
 });
 </script>
@@ -82,6 +99,6 @@ $punt2->setValue('crsid',$user->getValue('crsid'));
 echo $user->getValue('name') ;
 ?>
 <a href="calendar.php">Calendar</a><a href="logout.php">Home</a>
-<?php if ($user->getValue('p_adm')) {echo "<a href=\"admin.php\">Admin</a>";} 
+<?php if ($user->getValue('p_adm')) {echo "<a href=\"admin.php\">Admin</a>";}
 ?>
 </div>

@@ -22,7 +22,7 @@ if (isset($_SESSION['puntid']) )
 	if ($punt2->getValue('active')){echo "<option value=\"2\">" . $punt2->getValue('name') ."</option>";}
 }
 echo "</select></td>";
-	
+
 echo "<td><input type=\"date\" name=\"booking[startdate]\" min=\"". date('Y-m-d') . "\"  value=\"". $day->format('Y-m-d') . "\" required /></td>";
 echo "<td><input class=\"timepicker\" type=\"time\" name=\"booking[starttime]\" min=\"00:00\"  value=\"". $day->format('H:i') . "\" step=\"1800\" required /></td>";
 	//duration
