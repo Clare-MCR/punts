@@ -7,7 +7,7 @@ Standalone version
 
 requires 3 MySQL databases: access, mcrpunts\_punts, mcrpunts\_bookings
 
-  access: database with details of user permissions
+	access: database with details of user permissions
         1.	id	int(11)			No	None	AUTO_INCREMENT	 Change Change	 Drop Drop	More Show more actions
 	      2.	crsid	varchar(10)	latin1_swedish_ci		Yes	NULL		 Change Change	 Drop Drop	More Show more actions
 	      3.	e_view	int(1)			Yes	NULL		 Change Change	 Drop Drop	More Show more actions
@@ -24,7 +24,7 @@ requires 3 MySQL databases: access, mcrpunts\_punts, mcrpunts\_bookings
 	      14.	type	int(1)			Yes	NULL		 Change Change	 Drop Drop	More Show more actions
 	      15.	enabled	int(1)			Yes	NULL		 Change Change	 Drop Drop	More Show more actions
 	      
-  mcrpunts\_punts: information on punts (currently only 2 punts supported)
+	mcrpunts\_punts: information on punts (currently only 2 punts supported)
         1.	id	int(10)		UNSIGNED	No	None	AUTO_INCREMENT	 Change Change	 Drop Drop	More Show more actions
 	      2.	name	varchar(50)	latin1_swedish_ci		Yes	NULL		 Change Change	 Drop Drop	More Show more actions
 	      3.	available_from	datetime			Yes	NULL		 Change Change	 Drop Drop	More Show more actions
