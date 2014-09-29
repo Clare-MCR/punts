@@ -1,0 +1,62 @@
+<?php
+/**
+ * Plugin Name: Cambridge Punt Booker
+ * Plugin URI: https://github.com/RGunning/punts/tree/wordpress_version
+ * Description: A Punt booking system for Cambridge Punts
+ * Version: 2.0
+ * Author: Richard Gunning, rjg70
+ * Author URI: http://mcr.clare.cam.ac.uk/committee-201415/computing-officer
+ * License: GPL2
+ */
+
+/*  Copyright 2014  Richard Gunning  (email : rjgunning@gmail.com)
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License, version 2, as
+    published by the Free Software Foundation.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+*/
+
+ // If this file is called directly, abort.
+defined('ABSPATH') or die("No script kiddies please!");
+
+/*
+ * Include the main plugin file
+ *
+ * @since 2.0.0
+ */
+require_once( 'class-cambridge-punt-booker.php' );
+
+/**
+ * Define constant pointing to this file
+ *
+ * @since 2.0.0
+ */
+if( ! defined( 'CPB_MAIN_FILE' ) ) {
+	define( 'CPB_MAIN_FILE', __FILE__ );
+}
+
+/*
+ * Get instance of our plugin
+ *
+ * @since 2.0.0
+ */
+add_action( 'plugins_loaded', array( 'cambridge_punt_booker', 'get_instance' ) );
+
+/*
+ * If we are in admin then load the Admin class
+ *
+ * @since 2.0.0
+ */
+if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
+	require_once( 'class-cambridge-punt-booker-admin.php' );
+	add_action( 'plugins_loaded', array( 'cambridge_punt_booker_Admin', 'get_instance' ) );
+}
