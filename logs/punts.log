@@ -1,0 +1,8 @@
+Oct 02 14:49:27  [info] User 0d3aa741bb6372d40dab65060bb4af6c booking 714153 succeeded from 2014-10-05 14:00:00 to 2014-10-05 17:00:00 on MCArk
+Oct 02 14:50:04  [info] User 0d3aa741bb6372d40dab65060bb4af6c cancelled booking 714153 successfully
+Oct 02 14:53:18  [warning] A non-ravened user attempted login.
+Oct 02 14:53:22  [warning] A non-ravened user attempted login.
+Oct 02 14:53:31  [warning] A non-ravened user attempted login.
+Oct 02 15:11:25  [info] User 0d3aa741bb6372d40dab65060bb4af6c booking 714154 succeeded from 2014-10-05 12:00:00 to 2014-10-05 15:00:00 on Silence of the Cam
+Oct 02 17:14:41  [warning] User 043907dfcba198fb5ccd0ae517f4c66a denied access. User does not exist.
+Oct 03 13:08:26  [info] User 34274e8c94329ce312f7a028cba919b5 booking 714157 succeeded from 2014-10-03 15:00:00 to 2014-10-03 18:00:00 on Silence of the Cam
