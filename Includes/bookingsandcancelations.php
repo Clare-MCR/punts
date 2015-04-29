@@ -15,21 +15,27 @@ if (isset($_POST['booking'])){
 		$punt1->setValue('mobile',$booking['mobile']);
 		$punt1->setValue('from',$from->format('Y-m-d H:i:s'));
 		$punt1->setValue('to',$to->format('Y-m-d H:i:s'));
+		$confirmation=$punt1->BookPunt();
+
 	} else {
 		$punt2->setValue('crsid',$user->getValue('crsid'));
 		$punt2->setValue('bookername',$booking['name']);
 		$punt2->setValue('mobile',$booking['mobile']);
 		$punt2->setValue('from',$from->format('Y-m-d H:i:s'));
 		$punt2->setValue('to',$to->format('Y-m-d H:i:s'));
+		$confirmation=$punt2->BookPunt();
 	}
 	$_SESSION['puntid'] = $booking['puntid'];
 	$_SESSION['date'] = $from->format('Y-m-d H:i:s');
+	if ($confirmation){$confirmation="booked";}
 }
 
 if (isset($_POST['cancel'])){
 	$cancel=$_POST['cancel'];
 	$punt1->setValue('crsid',$user->getValue('crsid'));
 	$punt1->deletebooking($cancel['id']);
+	$confirmation="cancelled";
+
 }
 
 

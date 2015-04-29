@@ -73,11 +73,11 @@ $punt2->setValue('crsid',$user->getValue('crsid'));
 			controlType: 'select',
 			timeFormat: 'hh:mm tt',
 			stepMinute: 30,
-
 		});
 		$('input[type=date]').datepicker({
       		dateFormat: 'yy-mm-dd'
     	});
+
   }
 });
 </script>

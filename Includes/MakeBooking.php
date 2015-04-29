@@ -47,7 +47,11 @@ echo "</select>"; ?></td></tr></table>
 } else {
 	echo '<table border="0" class="booking_table">';
 	echo '<tr><th>Duration</th></tr>';
-	echo '<tr><td><input type="time" name="booking[duration]" min="00:30" max="03:00" step="1800" value="00:30" required>';
+	echo '<tr><td><select name="booking[duration]" required>';
+	for($hours=0; $hours<4; $hours++) // the interval for hours is '1'
+    	{for($mins=0; $mins<60; $mins+=30) // the interval for mins is '30'
+        	{echo '<option>'.str_pad($hours,2,'0',STR_PAD_LEFT).':'
+                    	    .str_pad($mins,2,'0',STR_PAD_LEFT).'</option>';}}
 	echo '</td></tr></table>';
 
 }
