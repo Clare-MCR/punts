@@ -70,6 +70,8 @@ class User {
 	public function __construct($crsid)
 	{
 		$this->crsid = $crsid;
+		$this->setDefaults();
+
 		$this->database = new Database();
 		if ($this->exists()) {
 			$this->getSQLuserData($crsid);
