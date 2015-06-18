@@ -6,7 +6,6 @@ if (isset($_POST['usersinfo'])){
 	echo "Adding/Updating users:";
     foreach ($userarray as $usercrsid) {
         $target = new User($usercrsid);
-        if (!$target->exists()) {$target->setDefaults();}
         if (isset($usersinfo['p_view'])){
         	switch ($usersinfo['p_view']) {
         		case "0":
