@@ -30,30 +30,30 @@ class genericItem {
 
 class User {
  	/**
-     * @class User
-     * @abstract The User class, controls access, user permissions and stores
-     * the user's crsid
-     * @description Not much more to say than the abstract really
-     */
+	* @class User
+	     * @abstract The User class, controls access, user permissions and stores
+	     * the user's crsid
+	     * @description Not much more to say than the abstract really
+	 */
 
-    private $pre    = PREFIXNAME;
+	private $pre    = PREFIXNAME;
 
-    # User associated variables
-    private $id;
-    private $crsid;
-    private $e_view;
-    private $e_book;
-    private $e_adm;
-    private $s_adm;
-    private $p_view;
-    private $p_book;
-    private $p_adm;
-    private $type;
-    private $enabled;
+	# User associated variables
+	private $id;
+	private $crsid;
+	private $e_view;
+	private $e_book;
+	private $e_adm;
+	private $s_adm;
+	private $p_view;
+	private $p_book;
+	private $p_adm;
+	private $type;
+	private $enabled;
 
-    private $name;
-    private $exists;
-	private $permissions;
+	private $name;
+	private $exists;
+    	private $permissions;
 	private $mobile;
 
 	private $cra;
