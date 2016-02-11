@@ -7,7 +7,7 @@
 Access database, load classes, start logger --- */
 
 
-require_once('/home/rjg70/mcrpwd.php'); # get db pwd
+require_once('/societies/claremcr/mcrpwd.php'); # get db pwd
 require_once('class_lib.php'); # load classes
 require_once('Log.php');
 require_once('htmlfunctions.php');
@@ -16,7 +16,7 @@ $dbuser = "claremcr";
 $database = "claremcr";
 
 // Initiate Logger
-$logger = &Log::singleton("file", "/home/rjg70/public_html/punts/logs/punts.log");
+$logger = &Log::singleton("file", "/societies/claremcr/public_html/punts/logs/punts.log");
 
 // Initiate database connection
 try {
